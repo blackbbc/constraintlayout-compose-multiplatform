@@ -16,10 +16,10 @@
 package androidx.constraintlayout.core
 
 import androidx.constraintlayout.core.scout.Scout
-import androidx.constraintlayout.core.widgets.ConstraintWidget
-import androidx.constraintlayout.core.widgets.ConstraintWidgetContainer
-import androidx.constraintlayout.core.widgets.Guideline
-import androidx.constraintlayout.core.widgets.Rectangle
+import androidx.constraintlayout.core.shaded.widgets.ConstraintWidget
+import androidx.constraintlayout.core.shaded.widgets.ConstraintWidgetContainer
+import androidx.constraintlayout.core.shaded.widgets.Guideline
+import androidx.constraintlayout.core.shaded.widgets.Rectangle
 import kotlin.math.abs
 import kotlin.random.Random
 import kotlin.test.Test

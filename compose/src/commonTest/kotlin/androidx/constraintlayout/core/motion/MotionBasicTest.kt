@@ -13,14 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package androidx.constraintlayout.core.motion
+package androidx.constraintlayout.core.shaded.motion
 
-import androidx.constraintlayout.core.motion.utils.CurveFit
-import androidx.constraintlayout.core.motion.utils.Easing
-import androidx.constraintlayout.core.motion.utils.HyperSpline
-import androidx.constraintlayout.core.motion.utils.LinearCurveFit
-import androidx.constraintlayout.core.motion.utils.Oscillator
-import androidx.constraintlayout.core.motion.utils.StopLogicEngine
+import androidx.constraintlayout.core.shaded.motion.utils.CurveFit
+import androidx.constraintlayout.core.shaded.motion.utils.Easing
+import androidx.constraintlayout.core.shaded.motion.utils.HyperSpline
+import androidx.constraintlayout.core.shaded.motion.utils.LinearCurveFit
+import androidx.constraintlayout.core.shaded.motion.utils.Oscillator
+import androidx.constraintlayout.core.shaded.motion.utils.StopLogicEngine
 import kotlin.math.abs
 import kotlin.test.Test
 import kotlin.test.assertEquals

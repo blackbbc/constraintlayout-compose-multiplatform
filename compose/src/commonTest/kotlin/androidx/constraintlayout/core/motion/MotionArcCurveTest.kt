@@ -13,10 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package androidx.constraintlayout.core.motion
+package androidx.constraintlayout.core.shaded.motion
 
-import androidx.constraintlayout.core.motion.utils.ArcCurveFit
-import androidx.constraintlayout.core.motion.utils.CurveFit
+import androidx.constraintlayout.core.shaded.motion.utils.ArcCurveFit
+import androidx.constraintlayout.core.shaded.motion.utils.CurveFit
 import kotlin.math.max
 import kotlin.math.min
 import kotlin.math.sqrt

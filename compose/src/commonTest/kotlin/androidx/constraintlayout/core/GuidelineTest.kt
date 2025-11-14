@@ -15,9 +15,9 @@
  */
 package androidx.constraintlayout.core
 
-import androidx.constraintlayout.core.widgets.ConstraintAnchor
-import androidx.constraintlayout.core.widgets.ConstraintWidget
-import androidx.constraintlayout.core.widgets.ConstraintWidgetContainer
+import androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor
+import androidx.constraintlayout.core.shaded.widgets.ConstraintWidget
+import androidx.constraintlayout.core.shaded.widgets.ConstraintWidgetContainer
 import kotlin.test.Test
 import kotlin.test.assertEquals
 
@@ -26,10 +26,10 @@ class GuidelineTest {
     fun testWrapGuideline() {
         val root = ConstraintWidgetContainer(0, 0, 800, 600)
         val a = ConstraintWidget(100, 20)
-        val guidelineRight = androidx.constraintlayout.core.widgets.Guideline()
-        guidelineRight.setOrientation(androidx.constraintlayout.core.widgets.Guideline.VERTICAL)
-        val guidelineBottom = androidx.constraintlayout.core.widgets.Guideline()
-        guidelineBottom.setOrientation(androidx.constraintlayout.core.widgets.Guideline.HORIZONTAL)
+        val guidelineRight = androidx.constraintlayout.core.shaded.widgets.Guideline()
+        guidelineRight.setOrientation(androidx.constraintlayout.core.shaded.widgets.Guideline.VERTICAL)
+        val guidelineBottom = androidx.constraintlayout.core.shaded.widgets.Guideline()
+        guidelineBottom.setOrientation(androidx.constraintlayout.core.shaded.widgets.Guideline.HORIZONTAL)
         guidelineRight.setGuidePercent(0.64f)
         guidelineBottom.setGuideEnd(60)
         root.debugName = "Root"
@@ -60,8 +60,8 @@ class GuidelineTest {
     fun testWrapGuideline2() {
         val root = ConstraintWidgetContainer(0, 0, 800, 600)
         val a = ConstraintWidget(100, 20)
-        val guideline = androidx.constraintlayout.core.widgets.Guideline()
-        guideline.setOrientation(androidx.constraintlayout.core.widgets.Guideline.VERTICAL)
+        val guideline = androidx.constraintlayout.core.shaded.widgets.Guideline()
+        guideline.setOrientation(androidx.constraintlayout.core.shaded.widgets.Guideline.VERTICAL)
         guideline.setGuideBegin(60)
         root.debugName = "Root"
         a.debugName = "A"

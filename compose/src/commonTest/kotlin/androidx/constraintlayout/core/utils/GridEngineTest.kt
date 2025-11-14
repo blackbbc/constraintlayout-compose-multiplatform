@@ -15,6 +15,7 @@
  */
 package androidx.constraintlayout.core.utils
 
+import androidx.constraintlayout.core.shaded.utils.GridEngine
 import kotlin.test.Test
 import kotlin.test.assertEquals
 

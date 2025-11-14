@@ -15,13 +15,13 @@
  */
 package androidx.constraintlayout.core
 
-import androidx.constraintlayout.core.state.ConstraintReference
-import androidx.constraintlayout.core.state.Dimension
-import androidx.constraintlayout.core.state.State
-import androidx.constraintlayout.core.widgets.ConstraintWidget
-import androidx.constraintlayout.core.widgets.ConstraintWidgetContainer
-import androidx.constraintlayout.core.widgets.Optimizer
-import androidx.constraintlayout.core.widgets.analyzer.BasicMeasure
+import androidx.constraintlayout.core.shaded.state.ConstraintReference
+import androidx.constraintlayout.core.shaded.state.Dimension
+import androidx.constraintlayout.core.shaded.state.State
+import androidx.constraintlayout.core.shaded.widgets.ConstraintWidget
+import androidx.constraintlayout.core.shaded.widgets.ConstraintWidgetContainer
+import androidx.constraintlayout.core.shaded.widgets.Optimizer
+import androidx.constraintlayout.core.shaded.widgets.analyzer.BasicMeasure
 import kotlin.test.Test
 import kotlin.test.assertEquals
 

@@ -13,12 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package androidx.constraintlayout.core.widgets
+package androidx.constraintlayout.core.shaded.widgets
 
-import androidx.constraintlayout.core.ArrayRow
-import androidx.constraintlayout.core.ArrayRow.ArrayRowVariables
-import androidx.constraintlayout.core.Cache
-import androidx.constraintlayout.core.SolverVariable
+import androidx.constraintlayout.core.shaded.ArrayRow
+import androidx.constraintlayout.core.shaded.ArrayRow.ArrayRowVariables
+import androidx.constraintlayout.core.shaded.Cache
+import androidx.constraintlayout.core.shaded.SolverVariable
 
 class BasicSolverVariableValues internal constructor(
     // our owner

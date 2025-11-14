@@ -16,8 +16,8 @@
 package androidx.constraintlayout.core.scout
 
 import androidx.constraintlayout.core.ext.Rectangle
-import androidx.constraintlayout.core.widgets.ConstraintWidget
-import androidx.constraintlayout.core.widgets.Guideline
+import androidx.constraintlayout.core.shaded.widgets.ConstraintWidget
+import androidx.constraintlayout.core.shaded.widgets.Guideline
 import kotlin.math.pow
 import kotlin.math.roundToInt
 

@@ -16,9 +16,9 @@
 package androidx.constraintlayout.core
 
 import androidx.constraintlayout.core.test.assertEquals
-import androidx.constraintlayout.core.widgets.ConstraintAnchor
-import androidx.constraintlayout.core.widgets.ConstraintWidget
-import androidx.constraintlayout.core.widgets.ConstraintWidgetContainer
+import androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor
+import androidx.constraintlayout.core.shaded.widgets.ConstraintWidget
+import androidx.constraintlayout.core.shaded.widgets.ConstraintWidgetContainer
 import kotlin.test.Test
 import kotlin.test.assertEquals
 

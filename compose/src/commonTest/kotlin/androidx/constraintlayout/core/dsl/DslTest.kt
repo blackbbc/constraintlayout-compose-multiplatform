@@ -16,10 +16,10 @@
 package androidx.constraintlayout.core.dsl
 
 import androidx.constraintlayout.core.dsl.Helper.HelperType
-import androidx.constraintlayout.core.parser.CLParser
-import androidx.constraintlayout.core.parser.CLParsingException
-import androidx.constraintlayout.core.state.CorePixelDp
-import androidx.constraintlayout.core.state.TransitionParser
+import androidx.constraintlayout.core.shaded.parser.CLParser
+import androidx.constraintlayout.core.shaded.parser.CLParsingException
+import androidx.constraintlayout.core.shaded.state.CorePixelDp
+import androidx.constraintlayout.core.shaded.state.TransitionParser
 import kotlin.test.Test
 import kotlin.test.assertEquals
 
@@ -1725,6 +1725,6 @@ class DslTest {
     companion object {
         //  test structures
         var sDpToPx: CorePixelDp = CorePixelDp { dp: Float -> dp }
-        var sTransitionState = androidx.constraintlayout.core.state.Transition(androidx.constraintlayout.core.dsl.DslTest.Companion.sDpToPx)
+        var sTransitionState = androidx.constraintlayout.core.shaded.state.Transition(androidx.constraintlayout.core.dsl.DslTest.Companion.sDpToPx)
     }
 }

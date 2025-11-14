@@ -15,9 +15,9 @@
  */
 package androidx.constraintlayout.core.scout
 
-import androidx.constraintlayout.core.widgets.ConstraintWidget
-import androidx.constraintlayout.core.widgets.ConstraintWidgetContainer
-import androidx.constraintlayout.core.widgets.WidgetContainer
+import androidx.constraintlayout.core.shaded.widgets.ConstraintWidget
+import androidx.constraintlayout.core.shaded.widgets.ConstraintWidgetContainer
+import androidx.constraintlayout.core.shaded.widgets.WidgetContainer
 
 /**
  * Main entry for the Scout Inference engine.

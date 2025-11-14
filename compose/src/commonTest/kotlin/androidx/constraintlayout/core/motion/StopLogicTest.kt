@@ -13,11 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package androidx.constraintlayout.core.motion
+package androidx.constraintlayout.core.shaded.motion
 
-import androidx.constraintlayout.core.motion.utils.SpringStopEngine
-import androidx.constraintlayout.core.motion.utils.StopEngine
-import androidx.constraintlayout.core.motion.utils.StopLogicEngine
+import androidx.constraintlayout.core.shaded.motion.utils.SpringStopEngine
+import androidx.constraintlayout.core.shaded.motion.utils.StopEngine
+import androidx.constraintlayout.core.shaded.motion.utils.StopLogicEngine
 import kotlin.math.max
 import kotlin.math.min
 import kotlin.test.Test

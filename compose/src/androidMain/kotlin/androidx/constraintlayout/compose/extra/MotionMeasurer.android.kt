@@ -10,9 +10,9 @@ import androidx.compose.ui.graphics.drawscope.DrawScope
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.graphics.nativeCanvas
 import androidx.constraintlayout.compose.MotionRenderDebug
-import androidx.constraintlayout.core.motion.Motion
-import androidx.constraintlayout.core.state.Transition
-import androidx.constraintlayout.core.state.WidgetFrame
+import androidx.constraintlayout.core.shaded.motion.Motion
+import androidx.constraintlayout.core.shaded.state.Transition
+import androidx.constraintlayout.core.shaded.state.WidgetFrame
 
 internal actual fun DrawScope.drawPathsPlatform(
     parentWidth: Float,

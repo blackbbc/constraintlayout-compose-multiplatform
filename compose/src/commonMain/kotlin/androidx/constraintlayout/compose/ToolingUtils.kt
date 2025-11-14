@@ -23,10 +23,10 @@ import androidx.compose.ui.semantics.SemanticsPropertyReceiver
 import androidx.compose.ui.util.fastForEach
 import androidx.constraintlayout.compose.extra.JSONArray
 import androidx.constraintlayout.compose.extra.JSONObject
-import androidx.constraintlayout.core.state.State.Companion.PARENT
-import androidx.constraintlayout.core.widgets.ConstraintWidget
-import androidx.constraintlayout.core.widgets.ConstraintWidgetContainer
-import androidx.constraintlayout.core.widgets.HelperWidget
+import androidx.constraintlayout.core.shaded.state.State.Companion.PARENT
+import androidx.constraintlayout.core.shaded.widgets.ConstraintWidget
+import androidx.constraintlayout.core.shaded.widgets.ConstraintWidgetContainer
+import androidx.constraintlayout.core.shaded.widgets.HelperWidget
 
 /** [SemanticsPropertyKey] to test [DesignInfoProvider] */
 val DesignInfoDataKey = SemanticsPropertyKey<DesignInfoProvider>("DesignInfoProvider")

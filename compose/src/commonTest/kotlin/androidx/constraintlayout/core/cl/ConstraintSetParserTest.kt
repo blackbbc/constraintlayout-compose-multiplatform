@@ -15,15 +15,15 @@
  */
 package androidx.constraintlayout.core.cl
 
-import androidx.constraintlayout.core.parser.CLParsingException
-import androidx.constraintlayout.core.state.ConstraintReference
-import androidx.constraintlayout.core.state.ConstraintSetParser
-import androidx.constraintlayout.core.state.ConstraintSetParser.LayoutVariables
-import androidx.constraintlayout.core.state.CorePixelDp
-import androidx.constraintlayout.core.state.State
-import androidx.constraintlayout.core.state.Transition
-import androidx.constraintlayout.core.widgets.ConstraintWidget
-import androidx.constraintlayout.core.widgets.ConstraintWidgetContainer
+import androidx.constraintlayout.core.shaded.parser.CLParsingException
+import androidx.constraintlayout.core.shaded.state.ConstraintReference
+import androidx.constraintlayout.core.shaded.state.ConstraintSetParser
+import androidx.constraintlayout.core.shaded.state.ConstraintSetParser.LayoutVariables
+import androidx.constraintlayout.core.shaded.state.CorePixelDp
+import androidx.constraintlayout.core.shaded.state.State
+import androidx.constraintlayout.core.shaded.state.Transition
+import androidx.constraintlayout.core.shaded.widgets.ConstraintWidget
+import androidx.constraintlayout.core.shaded.widgets.ConstraintWidgetContainer
 import kotlin.test.Test
 import kotlin.test.assertNotNull
 

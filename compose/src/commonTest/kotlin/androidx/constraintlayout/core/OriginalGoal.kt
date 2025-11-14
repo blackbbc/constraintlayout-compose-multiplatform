@@ -15,6 +15,10 @@
  */
 package androidx.constraintlayout.core
 
+import androidx.constraintlayout.core.shaded.ArrayLinkedVariables
+import androidx.constraintlayout.core.shaded.LinearSystem
+import androidx.constraintlayout.core.shaded.SolverVariable
+
 /**
  * Represents a goal to minimize
  */

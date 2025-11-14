@@ -13,9 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package androidx.constraintlayout.core.motion
+package androidx.constraintlayout.core.shaded.motion
 
-import androidx.constraintlayout.core.motion.utils.KeyFrameArray.CustomArray
+import androidx.constraintlayout.core.shaded.motion.utils.KeyFrameArray.CustomArray
 import kotlin.random.Random
 import kotlin.test.Test
 import kotlin.test.assertEquals

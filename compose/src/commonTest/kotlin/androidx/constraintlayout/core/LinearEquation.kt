@@ -15,6 +15,10 @@
  */
 package androidx.constraintlayout.core
 
+import androidx.constraintlayout.core.shaded.ArrayRow
+import androidx.constraintlayout.core.shaded.LinearSystem
+import androidx.constraintlayout.core.shaded.SolverVariable
+
 /**
  * LinearEquation is used to represent the linear equations fed into the solver.<br></br>
  * A linear equation can be an equality or
@@ -114,9 +118,9 @@ class LinearEquation {
     }
 
     /**
-     * Remove [EquationVariable] pointing to [SolverVariable]
+     * Remove [EquationVariable] pointing to [androidx.constraintlayout.core.shaded.SolverVariable]
      *
-     * @param v the [SolverVariable] we want to remove from the equation
+     * @param v the [androidx.constraintlayout.core.shaded.SolverVariable] we want to remove from the equation
      */
     fun remove(v: SolverVariable) {
         var ev = find(v, mLeftSide)

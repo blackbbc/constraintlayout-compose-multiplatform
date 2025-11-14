@@ -15,9 +15,9 @@
  */
 package androidx.constraintlayout.core
 
-import androidx.constraintlayout.core.widgets.ConstraintAnchor
-import androidx.constraintlayout.core.widgets.ConstraintWidget
-import androidx.constraintlayout.core.widgets.ConstraintWidgetContainer
+import androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor
+import androidx.constraintlayout.core.shaded.widgets.ConstraintWidget
+import androidx.constraintlayout.core.shaded.widgets.ConstraintWidgetContainer
 import kotlin.test.Test
 import kotlin.test.assertEquals
 
@@ -75,7 +75,7 @@ class WrapTest {
         b.setVerticalMatchStyle(ConstraintWidget.MATCH_CONSTRAINT_SPREAD, 0, 60, 1f)
         root.setHorizontalDimensionBehaviour(ConstraintWidget.DimensionBehaviour.WRAP_CONTENT)
         root.setVerticalDimensionBehaviour(ConstraintWidget.DimensionBehaviour.WRAP_CONTENT)
-        root.optimizationLevel = androidx.constraintlayout.core.widgets.Optimizer.OPTIMIZATION_NONE
+        root.optimizationLevel = androidx.constraintlayout.core.shaded.widgets.Optimizer.OPTIMIZATION_NONE
         root.layout()
         println("root: $root A: $a B: $b C: $c")
         assertEquals(root.width, 200)
@@ -106,7 +106,7 @@ class WrapTest {
         a.setDimensionRatio("1:1")
         root.height = 0
         root.setVerticalDimensionBehaviour(ConstraintWidget.DimensionBehaviour.WRAP_CONTENT)
-        root.optimizationLevel = androidx.constraintlayout.core.widgets.Optimizer.OPTIMIZATION_NONE
+        root.optimizationLevel = androidx.constraintlayout.core.shaded.widgets.Optimizer.OPTIMIZATION_NONE
         root.layout()
         println("root: $root A: $a")
         assertEquals(root.width, 100)
@@ -150,7 +150,7 @@ class WrapTest {
         b.setDimensionRatio("1:1")
         root.setHorizontalDimensionBehaviour(ConstraintWidget.DimensionBehaviour.WRAP_CONTENT)
         root.setVerticalDimensionBehaviour(ConstraintWidget.DimensionBehaviour.WRAP_CONTENT)
-        root.optimizationLevel = androidx.constraintlayout.core.widgets.Optimizer.OPTIMIZATION_NONE
+        root.optimizationLevel = androidx.constraintlayout.core.shaded.widgets.Optimizer.OPTIMIZATION_NONE
         root.layout()
         println("root: $root A: $a B: $b")
         assertEquals(root.width, 100)
@@ -187,7 +187,7 @@ class WrapTest {
         a.setHorizontalDimensionBehaviour(ConstraintWidget.DimensionBehaviour.MATCH_CONSTRAINT)
         a.setVerticalDimensionBehaviour(ConstraintWidget.DimensionBehaviour.MATCH_CONSTRAINT)
         a.setDimensionRatio("1:1")
-        root.optimizationLevel = androidx.constraintlayout.core.widgets.Optimizer.OPTIMIZATION_NONE
+        root.optimizationLevel = androidx.constraintlayout.core.shaded.widgets.Optimizer.OPTIMIZATION_NONE
         root.layout()
         println("root: $root A: $a B: $b C: $c")
         assertEquals(a.width, 300)
@@ -240,7 +240,7 @@ class WrapTest {
         b.setVerticalDimensionBehaviour(ConstraintWidget.DimensionBehaviour.MATCH_CONSTRAINT)
         d.setVerticalDimensionBehaviour(ConstraintWidget.DimensionBehaviour.MATCH_CONSTRAINT)
         root.setVerticalDimensionBehaviour(ConstraintWidget.DimensionBehaviour.WRAP_CONTENT)
-        root.optimizationLevel = androidx.constraintlayout.core.widgets.Optimizer.OPTIMIZATION_NONE
+        root.optimizationLevel = androidx.constraintlayout.core.shaded.widgets.Optimizer.OPTIMIZATION_NONE
         root.layout()
         println("root: $root A: $a B: $b C: $c D: $d")
         assertEquals(root.height, 40)
@@ -283,7 +283,7 @@ class WrapTest {
         e.connect(ConstraintAnchor.Type.TOP, root, ConstraintAnchor.Type.TOP)
         e.connect(ConstraintAnchor.Type.BOTTOM, root, ConstraintAnchor.Type.BOTTOM)
         root.setVerticalDimensionBehaviour(ConstraintWidget.DimensionBehaviour.WRAP_CONTENT)
-        root.optimizationLevel = androidx.constraintlayout.core.widgets.Optimizer.OPTIMIZATION_NONE
+        root.optimizationLevel = androidx.constraintlayout.core.shaded.widgets.Optimizer.OPTIMIZATION_NONE
         root.layout()
         println(
             "root: " + root + " A: " + a +
@@ -358,10 +358,10 @@ class WrapTest {
         val a = ConstraintWidget(80, 80)
         val b = ConstraintWidget(60, 60)
         val c = ConstraintWidget(50, 100)
-        val barrier1 = androidx.constraintlayout.core.widgets.Barrier()
-        barrier1.setBarrierType(androidx.constraintlayout.core.widgets.Barrier.BOTTOM)
-        val barrier2 = androidx.constraintlayout.core.widgets.Barrier()
-        barrier2.setBarrierType(androidx.constraintlayout.core.widgets.Barrier.BOTTOM)
+        val barrier1 = androidx.constraintlayout.core.shaded.widgets.Barrier()
+        barrier1.setBarrierType(androidx.constraintlayout.core.shaded.widgets.Barrier.BOTTOM)
+        val barrier2 = androidx.constraintlayout.core.shaded.widgets.Barrier()
+        barrier2.setBarrierType(androidx.constraintlayout.core.shaded.widgets.Barrier.BOTTOM)
         barrier1.add(a)
         barrier1.add(b)
         barrier2.add(c)
@@ -447,7 +447,7 @@ class WrapTest {
     fun testWrap6() {
         val root = ConstraintWidgetContainer(0, 0, 500, 600)
         val a = ConstraintWidget(100, 20)
-        val guideline = androidx.constraintlayout.core.widgets.Guideline()
+        val guideline = androidx.constraintlayout.core.shaded.widgets.Guideline()
         guideline.setOrientation(ConstraintWidget.VERTICAL)
         guideline.setGuidePercent(0.5f)
         root.debugName = "root"
@@ -478,7 +478,7 @@ class WrapTest {
         val root = ConstraintWidgetContainer(0, 0, 500, 600)
         val a = ConstraintWidget(100, 20)
         val divider = ConstraintWidget(1, 20)
-        val guideline = androidx.constraintlayout.core.widgets.Guideline()
+        val guideline = androidx.constraintlayout.core.shaded.widgets.Guideline()
         guideline.setOrientation(ConstraintWidget.VERTICAL)
         guideline.setGuidePercent(0.5f)
         root.debugName = "root"
@@ -605,8 +605,8 @@ class WrapTest {
         val space = ConstraintWidget(50, 50)
         val button = ConstraintWidget(100, 80)
         val text = ConstraintWidget(90, 30)
-        val barrier = androidx.constraintlayout.core.widgets.Barrier()
-        barrier.setBarrierType(androidx.constraintlayout.core.widgets.Barrier.BOTTOM)
+        val barrier = androidx.constraintlayout.core.shaded.widgets.Barrier()
+        barrier.setBarrierType(androidx.constraintlayout.core.shaded.widgets.Barrier.BOTTOM)
         barrier.add(button)
         barrier.add(space)
         root.debugName = "root"

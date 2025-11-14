@@ -15,10 +15,10 @@
  */
 package androidx.constraintlayout.core
 
-import androidx.constraintlayout.core.widgets.ConstraintAnchor
-import androidx.constraintlayout.core.widgets.ConstraintWidget
-import androidx.constraintlayout.core.widgets.ConstraintWidget.DimensionBehaviour
-import androidx.constraintlayout.core.widgets.ConstraintWidgetContainer
+import androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor
+import androidx.constraintlayout.core.shaded.widgets.ConstraintWidget
+import androidx.constraintlayout.core.shaded.widgets.ConstraintWidget.DimensionBehaviour
+import androidx.constraintlayout.core.shaded.widgets.ConstraintWidgetContainer
 import kotlin.test.Test
 import kotlin.test.assertEquals
 
@@ -32,47 +32,47 @@ class AdvancedChainTest {
         a.setDebugSolverName(root.getSystem(), "A")
         b.setDebugSolverName(root.getSystem(), "B")
         a.connect(
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.LEFT,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.LEFT,
             root,
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.LEFT,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.LEFT,
         )
         a.connect(
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.RIGHT,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.RIGHT,
             root,
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.RIGHT,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.RIGHT,
         )
         b.connect(
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.LEFT,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.LEFT,
             root,
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.LEFT,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.LEFT,
         )
         b.connect(
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.RIGHT,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.RIGHT,
             root,
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.RIGHT,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.RIGHT,
         )
         a.connect(
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.TOP,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.TOP,
             root,
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.TOP,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.TOP,
             0,
         )
         a.connect(
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.BOTTOM,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.BOTTOM,
             b,
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.TOP,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.TOP,
             0,
         )
         b.connect(
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.TOP,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.TOP,
             a,
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.BOTTOM,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.BOTTOM,
             0,
         )
         b.connect(
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.BOTTOM,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.BOTTOM,
             root,
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.BOTTOM,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.BOTTOM,
             0,
         )
         root.add(a)
@@ -81,7 +81,7 @@ class AdvancedChainTest {
         a.setVerticalDimensionBehaviour(DimensionBehaviour.MATCH_CONSTRAINT)
         b.setHorizontalDimensionBehaviour(DimensionBehaviour.MATCH_CONSTRAINT)
         b.setVerticalDimensionBehaviour(DimensionBehaviour.MATCH_CONSTRAINT)
-        root.optimizationLevel = androidx.constraintlayout.core.widgets.Optimizer.OPTIMIZATION_NONE
+        root.optimizationLevel = androidx.constraintlayout.core.shaded.widgets.Optimizer.OPTIMIZATION_NONE
         root.layout()
         println("root: $root")
         println("A: $a")
@@ -141,53 +141,53 @@ class AdvancedChainTest {
         root.add(b)
         root.add(c)
         a.connect(
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.LEFT,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.LEFT,
             root,
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.LEFT,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.LEFT,
         )
         a.connect(
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.TOP,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.TOP,
             root,
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.TOP,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.TOP,
         )
         a.connect(
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.BOTTOM,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.BOTTOM,
             root,
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.BOTTOM,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.BOTTOM,
         )
         b.connect(
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.LEFT,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.LEFT,
             a,
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.RIGHT,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.RIGHT,
             100,
         )
         c.connect(
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.LEFT,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.LEFT,
             a,
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.RIGHT,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.RIGHT,
             100,
         )
         b.connect(
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.TOP,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.TOP,
             a,
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.TOP,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.TOP,
         )
         b.connect(
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.BOTTOM,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.BOTTOM,
             c,
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.TOP,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.TOP,
         )
         c.connect(
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.TOP,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.TOP,
             b,
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.BOTTOM,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.BOTTOM,
         )
         c.connect(
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.BOTTOM,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.BOTTOM,
             a,
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.BOTTOM,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.BOTTOM,
         )
-        root.optimizationLevel = androidx.constraintlayout.core.widgets.Optimizer.OPTIMIZATION_NONE
+        root.optimizationLevel = androidx.constraintlayout.core.shaded.widgets.Optimizer.OPTIMIZATION_NONE
         root.layout()
         println("A: $a")
         println("B: $b")
@@ -206,27 +206,27 @@ class AdvancedChainTest {
         a.setDebugSolverName(root.getSystem(), "A")
         b.setDebugSolverName(root.getSystem(), "B")
         a.connect(
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.LEFT,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.LEFT,
             root,
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.LEFT,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.LEFT,
             0,
         )
         a.connect(
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.RIGHT,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.RIGHT,
             b,
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.LEFT,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.LEFT,
             0,
         )
         b.connect(
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.LEFT,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.LEFT,
             a,
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.RIGHT,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.RIGHT,
             0,
         )
         b.connect(
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.RIGHT,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.RIGHT,
             root,
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.RIGHT,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.RIGHT,
             0,
         )
         root.add(a)
@@ -235,7 +235,7 @@ class AdvancedChainTest {
         b.setHorizontalDimensionBehaviour(DimensionBehaviour.MATCH_CONSTRAINT)
         a.setHorizontalWeight(1f)
         b.setHorizontalWeight(0f)
-        root.optimizationLevel = androidx.constraintlayout.core.widgets.Optimizer.OPTIMIZATION_NONE
+        root.optimizationLevel = androidx.constraintlayout.core.shaded.widgets.Optimizer.OPTIMIZATION_NONE
         root.layout()
         println("A: $a")
         println("B: $b")
@@ -256,39 +256,39 @@ class AdvancedChainTest {
         b.setDebugSolverName(root.getSystem(), "B")
         c.setDebugSolverName(root.getSystem(), "C")
         a.connect(
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.LEFT,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.LEFT,
             root,
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.LEFT,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.LEFT,
             0,
         )
         a.connect(
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.RIGHT,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.RIGHT,
             b,
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.LEFT,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.LEFT,
             0,
         )
         b.connect(
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.LEFT,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.LEFT,
             a,
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.RIGHT,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.RIGHT,
             0,
         )
         b.connect(
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.RIGHT,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.RIGHT,
             c,
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.LEFT,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.LEFT,
             0,
         )
         c.connect(
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.LEFT,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.LEFT,
             b,
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.RIGHT,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.RIGHT,
             0,
         )
         c.connect(
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.RIGHT,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.RIGHT,
             root,
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.RIGHT,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.RIGHT,
             0,
         )
         root.add(a)
@@ -300,7 +300,7 @@ class AdvancedChainTest {
         a.setHorizontalWeight(1f)
         b.setHorizontalWeight(0f)
         c.setHorizontalWeight(1f)
-        root.optimizationLevel = androidx.constraintlayout.core.widgets.Optimizer.OPTIMIZATION_NONE
+        root.optimizationLevel = androidx.constraintlayout.core.shaded.widgets.Optimizer.OPTIMIZATION_NONE
         root.layout()
         println("A: $a")
         println("B: $b")
@@ -330,104 +330,104 @@ class AdvancedChainTest {
         root.add(c)
         root.add(d)
         a.connect(
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.LEFT,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.LEFT,
             root,
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.LEFT,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.LEFT,
             0,
         )
         a.connect(
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.RIGHT,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.RIGHT,
             root,
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.RIGHT,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.RIGHT,
             0,
         )
         b.connect(
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.LEFT,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.LEFT,
             root,
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.LEFT,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.LEFT,
             0,
         )
         b.connect(
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.RIGHT,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.RIGHT,
             root,
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.RIGHT,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.RIGHT,
             0,
         )
         c.connect(
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.LEFT,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.LEFT,
             root,
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.LEFT,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.LEFT,
             0,
         )
         c.connect(
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.RIGHT,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.RIGHT,
             root,
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.RIGHT,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.RIGHT,
             0,
         )
         d.connect(
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.LEFT,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.LEFT,
             root,
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.LEFT,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.LEFT,
             0,
         )
         d.connect(
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.RIGHT,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.RIGHT,
             root,
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.RIGHT,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.RIGHT,
             0,
         )
         a.connect(
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.TOP,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.TOP,
             root,
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.TOP,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.TOP,
             0,
         )
         a.connect(
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.BOTTOM,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.BOTTOM,
             b,
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.TOP,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.TOP,
             0,
         )
         b.connect(
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.TOP,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.TOP,
             a,
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.BOTTOM,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.BOTTOM,
             0,
         )
         b.connect(
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.BOTTOM,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.BOTTOM,
             c,
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.TOP,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.TOP,
             0,
         )
         c.connect(
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.TOP,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.TOP,
             b,
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.BOTTOM,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.BOTTOM,
             0,
         )
         c.connect(
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.BOTTOM,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.BOTTOM,
             d,
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.TOP,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.TOP,
             0,
         )
         d.connect(
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.TOP,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.TOP,
             c,
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.BOTTOM,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.BOTTOM,
             0,
         )
         d.connect(
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.BOTTOM,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.BOTTOM,
             root,
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.BOTTOM,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.BOTTOM,
             0,
         )
         b.visibility = ConstraintWidget.GONE
         d.visibility = ConstraintWidget.GONE
-        root.optimizationLevel = androidx.constraintlayout.core.widgets.Optimizer.OPTIMIZATION_NONE
+        root.optimizationLevel = androidx.constraintlayout.core.shaded.widgets.Optimizer.OPTIMIZATION_NONE
         root.layout()
         println("A: $a")
         println("B: $b")
@@ -454,93 +454,93 @@ class AdvancedChainTest {
         root.add(c)
         root.add(ratio)
         a.connect(
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.LEFT,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.LEFT,
             root,
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.LEFT,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.LEFT,
             0,
         )
         a.connect(
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.RIGHT,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.RIGHT,
             root,
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.RIGHT,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.RIGHT,
             0,
         )
         b.connect(
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.LEFT,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.LEFT,
             root,
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.LEFT,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.LEFT,
             0,
         )
         b.connect(
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.RIGHT,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.RIGHT,
             root,
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.RIGHT,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.RIGHT,
             0,
         )
         c.connect(
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.LEFT,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.LEFT,
             root,
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.LEFT,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.LEFT,
             0,
         )
         c.connect(
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.RIGHT,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.RIGHT,
             root,
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.RIGHT,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.RIGHT,
             0,
         )
         ratio.connect(
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.TOP,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.TOP,
             root,
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.TOP,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.TOP,
             0,
         )
         ratio.connect(
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.LEFT,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.LEFT,
             root,
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.LEFT,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.LEFT,
             0,
         )
         ratio.connect(
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.RIGHT,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.RIGHT,
             root,
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.RIGHT,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.RIGHT,
             0,
         )
         a.connect(
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.TOP,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.TOP,
             root,
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.TOP,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.TOP,
             0,
         )
         a.connect(
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.BOTTOM,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.BOTTOM,
             b,
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.TOP,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.TOP,
             0,
         )
         b.connect(
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.TOP,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.TOP,
             a,
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.BOTTOM,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.BOTTOM,
             0,
         )
         b.connect(
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.BOTTOM,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.BOTTOM,
             ratio,
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.BOTTOM,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.BOTTOM,
             0,
         )
         c.connect(
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.TOP,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.TOP,
             b,
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.TOP,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.TOP,
             0,
         )
         c.connect(
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.BOTTOM,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.BOTTOM,
             ratio,
-            androidx.constraintlayout.core.widgets.ConstraintAnchor.Type.BOTTOM,
+            androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor.Type.BOTTOM,
             0,
         )
         a.setHorizontalDimensionBehaviour(DimensionBehaviour.MATCH_CONSTRAINT)
@@ -554,7 +554,7 @@ class AdvancedChainTest {
         ratio.setDimensionRatio("4:3")
         b.visibility = ConstraintWidget.GONE
         c.visibility = ConstraintWidget.GONE
-        root.optimizationLevel = androidx.constraintlayout.core.widgets.Optimizer.OPTIMIZATION_NONE
+        root.optimizationLevel = androidx.constraintlayout.core.shaded.widgets.Optimizer.OPTIMIZATION_NONE
         root.layout()
         println("A: $a")
         println("B: $b")

@@ -15,9 +15,9 @@
  */
 package androidx.constraintlayout.core
 
-import androidx.constraintlayout.core.widgets.ConstraintAnchor
-import androidx.constraintlayout.core.widgets.ConstraintWidget
-import androidx.constraintlayout.core.widgets.ConstraintWidgetContainer
+import androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor
+import androidx.constraintlayout.core.shaded.widgets.ConstraintWidget
+import androidx.constraintlayout.core.shaded.widgets.ConstraintWidgetContainer
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertTrue
@@ -64,11 +64,11 @@ class MatchConstraintTest {
     @Test
     fun testMinMaxMatch() {
         val root = ConstraintWidgetContainer(0, 0, 800, 600)
-        val guidelineA = androidx.constraintlayout.core.widgets.Guideline()
-        guidelineA.setOrientation(androidx.constraintlayout.core.widgets.Guideline.VERTICAL)
+        val guidelineA = androidx.constraintlayout.core.shaded.widgets.Guideline()
+        guidelineA.setOrientation(androidx.constraintlayout.core.shaded.widgets.Guideline.VERTICAL)
         guidelineA.setGuideBegin(100)
-        val guidelineB = androidx.constraintlayout.core.widgets.Guideline()
-        guidelineB.setOrientation(androidx.constraintlayout.core.widgets.Guideline.VERTICAL)
+        val guidelineB = androidx.constraintlayout.core.shaded.widgets.Guideline()
+        guidelineB.setOrientation(androidx.constraintlayout.core.shaded.widgets.Guideline.VERTICAL)
         guidelineB.setGuideEnd(100)
         root.add(guidelineA)
         root.add(guidelineB)

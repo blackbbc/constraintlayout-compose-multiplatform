@@ -15,6 +15,9 @@
  */
 package androidx.constraintlayout.core
 
+import androidx.constraintlayout.core.shaded.LinearSystem
+import androidx.constraintlayout.core.shaded.SolverVariable
+
 /**
  * EquationVariable is used to represent a variable in a [LinearEquation]
  */
@@ -32,9 +35,9 @@ class EquationVariable {
     var amount: Amount? = null
 
     /**
-     * Accessor for the [SolverVariable]
+     * Accessor for the [androidx.constraintlayout.core.shaded.SolverVariable]
      *
-     * @return the [SolverVariable]
+     * @return the [androidx.constraintlayout.core.shaded.SolverVariable]
      */
     var solverVariable: SolverVariable? = null
         private set
@@ -42,7 +45,7 @@ class EquationVariable {
     /**
      * Base constructor
      *
-     * @param system the [linear system][LinearSystem] this equation variable belongs to
+     * @param system the [linear system][androidx.constraintlayout.core.shaded.LinearSystem] this equation variable belongs to
      * @param amount the amount associated with this variable
      * @param name   the variable name
      * @param type   the variable type

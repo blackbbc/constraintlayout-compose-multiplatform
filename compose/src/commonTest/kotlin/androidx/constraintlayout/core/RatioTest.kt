@@ -16,9 +16,9 @@
 package androidx.constraintlayout.core
 
 import androidx.constraintlayout.core.test.assertEquals
-import androidx.constraintlayout.core.widgets.ConstraintAnchor
-import androidx.constraintlayout.core.widgets.ConstraintWidget
-import androidx.constraintlayout.core.widgets.ConstraintWidgetContainer
+import androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor
+import androidx.constraintlayout.core.shaded.widgets.ConstraintWidget
+import androidx.constraintlayout.core.shaded.widgets.ConstraintWidgetContainer
 import kotlin.test.Test
 import kotlin.test.assertEquals
 import kotlin.test.assertTrue
@@ -79,8 +79,8 @@ class RatioTest {
         val a = ConstraintWidget(100, 20)
         val b = ConstraintWidget(100, 20)
         val c = ConstraintWidget(100, 20)
-        val guideline = androidx.constraintlayout.core.widgets.Guideline()
-        guideline.setOrientation(androidx.constraintlayout.core.widgets.Guideline.HORIZONTAL)
+        val guideline = androidx.constraintlayout.core.shaded.widgets.Guideline()
+        guideline.setOrientation(androidx.constraintlayout.core.shaded.widgets.Guideline.HORIZONTAL)
         guideline.setGuideBegin(100)
         root.debugName = "root"
         root.add(a)
@@ -420,7 +420,7 @@ class RatioTest {
         a.setVerticalDimensionBehaviour(ConstraintWidget.DimensionBehaviour.MATCH_CONSTRAINT)
         a.setVerticalMatchStyle(ConstraintWidget.MATCH_CONSTRAINT_RATIO, 0, 150, 0f)
         a.setDimensionRatio("W,16:9")
-        root.optimizationLevel = androidx.constraintlayout.core.widgets.Optimizer.OPTIMIZATION_NONE
+        root.optimizationLevel = androidx.constraintlayout.core.shaded.widgets.Optimizer.OPTIMIZATION_NONE
         root.layout()
         println("a) root: $root A: $a")
         assertEquals(a.width, 267)
@@ -443,7 +443,7 @@ class RatioTest {
         a.setVerticalDimensionBehaviour(ConstraintWidget.DimensionBehaviour.MATCH_CONSTRAINT)
         a.setVerticalMatchStyle(ConstraintWidget.MATCH_CONSTRAINT_RATIO, 0, 150, 0f)
         a.setDimensionRatio("16:9")
-        root.optimizationLevel = androidx.constraintlayout.core.widgets.Optimizer.OPTIMIZATION_NONE
+        root.optimizationLevel = androidx.constraintlayout.core.shaded.widgets.Optimizer.OPTIMIZATION_NONE
         root.layout()
         println("a) root: $root A: $a")
         assertEquals(a.width, 267, 1)
@@ -470,7 +470,7 @@ class RatioTest {
         b.setVerticalDimensionBehaviour(ConstraintWidget.DimensionBehaviour.MATCH_CONSTRAINT)
         b.setDimensionRatio("2:3")
         b.connect(ConstraintAnchor.Type.LEFT, a, ConstraintAnchor.Type.LEFT, 50)
-        root.optimizationLevel = androidx.constraintlayout.core.widgets.Optimizer.OPTIMIZATION_NONE
+        root.optimizationLevel = androidx.constraintlayout.core.shaded.widgets.Optimizer.OPTIMIZATION_NONE
         root.layout()
         println("a) root: $root A: $a B: $b")
         assertEquals(b.height, 150)
@@ -491,7 +491,7 @@ class RatioTest {
         a.setHorizontalDimensionBehaviour(ConstraintWidget.DimensionBehaviour.MATCH_CONSTRAINT)
         a.setVerticalDimensionBehaviour(ConstraintWidget.DimensionBehaviour.MATCH_CONSTRAINT)
         a.setDimensionRatio("1:1")
-        root.optimizationLevel = androidx.constraintlayout.core.widgets.Optimizer.OPTIMIZATION_NONE
+        root.optimizationLevel = androidx.constraintlayout.core.shaded.widgets.Optimizer.OPTIMIZATION_NONE
         root.setVerticalDimensionBehaviour(ConstraintWidget.DimensionBehaviour.WRAP_CONTENT)
         root.layout()
         println("a) root: $root A: $a")
@@ -515,7 +515,7 @@ class RatioTest {
         a.setHorizontalDimensionBehaviour(ConstraintWidget.DimensionBehaviour.MATCH_CONSTRAINT)
         a.setVerticalDimensionBehaviour(ConstraintWidget.DimensionBehaviour.MATCH_CONSTRAINT)
         a.setDimensionRatio("1:1")
-        root.optimizationLevel = androidx.constraintlayout.core.widgets.Optimizer.OPTIMIZATION_NONE
+        root.optimizationLevel = androidx.constraintlayout.core.shaded.widgets.Optimizer.OPTIMIZATION_NONE
         root.setHorizontalDimensionBehaviour(ConstraintWidget.DimensionBehaviour.WRAP_CONTENT)
         root.layout()
         println("a) root: $root A: $a")
@@ -549,7 +549,7 @@ class RatioTest {
         b.setVerticalDimensionBehaviour(ConstraintWidget.DimensionBehaviour.MATCH_CONSTRAINT)
         a.setDimensionRatio("1:1")
         b.setDimensionRatio("1:1")
-        root.optimizationLevel = androidx.constraintlayout.core.widgets.Optimizer.OPTIMIZATION_NONE
+        root.optimizationLevel = androidx.constraintlayout.core.shaded.widgets.Optimizer.OPTIMIZATION_NONE
         root.setHorizontalDimensionBehaviour(ConstraintWidget.DimensionBehaviour.WRAP_CONTENT)
         root.layout()
         println("a) root: $root A: $a B: $b")
@@ -735,12 +735,12 @@ class RatioTest {
         val root = ConstraintWidgetContainer(0, 0, 1000, 600)
         val a = ConstraintWidget(264, 144)
         val b = ConstraintWidget(264, 144)
-        val verticalGuideline = androidx.constraintlayout.core.widgets.Guideline()
+        val verticalGuideline = androidx.constraintlayout.core.shaded.widgets.Guideline()
         verticalGuideline.setGuidePercent(0.34f)
-        verticalGuideline.setOrientation(androidx.constraintlayout.core.widgets.Guideline.VERTICAL)
-        val horizontalGuideline = androidx.constraintlayout.core.widgets.Guideline()
+        verticalGuideline.setOrientation(androidx.constraintlayout.core.shaded.widgets.Guideline.VERTICAL)
+        val horizontalGuideline = androidx.constraintlayout.core.shaded.widgets.Guideline()
         horizontalGuideline.setGuidePercent(0.66f)
-        horizontalGuideline.setOrientation(androidx.constraintlayout.core.widgets.Guideline.HORIZONTAL)
+        horizontalGuideline.setOrientation(androidx.constraintlayout.core.shaded.widgets.Guideline.HORIZONTAL)
         root.debugName = "root"
         a.debugName = "A"
         b.debugName = "B"
@@ -800,7 +800,7 @@ class RatioTest {
         a.connect(ConstraintAnchor.Type.RIGHT, root, ConstraintAnchor.Type.RIGHT)
         a.connect(ConstraintAnchor.Type.TOP, root, ConstraintAnchor.Type.TOP)
         a.connect(ConstraintAnchor.Type.BOTTOM, root, ConstraintAnchor.Type.BOTTOM)
-        root.optimizationLevel = androidx.constraintlayout.core.widgets.Optimizer.OPTIMIZATION_NONE
+        root.optimizationLevel = androidx.constraintlayout.core.shaded.widgets.Optimizer.OPTIMIZATION_NONE
         root.layout()
         println("a) root: $root A: $a")
         assertEquals(a.left, 450)
@@ -808,7 +808,7 @@ class RatioTest {
         assertEquals(a.width, 100)
         assertEquals(a.height, 20)
         root.optimizationLevel =
-            androidx.constraintlayout.core.widgets.Optimizer.OPTIMIZATION_STANDARD
+            androidx.constraintlayout.core.shaded.widgets.Optimizer.OPTIMIZATION_STANDARD
         root.layout()
         println("b) root: $root A: $a")
         assertEquals(a.left, 450)
@@ -855,7 +855,7 @@ class RatioTest {
         a.setHorizontalDimensionBehaviour(ConstraintWidget.DimensionBehaviour.MATCH_CONSTRAINT)
         a.setVerticalDimensionBehaviour(ConstraintWidget.DimensionBehaviour.MATCH_CONSTRAINT)
         a.setDimensionRatio("1:1")
-        root.optimizationLevel = androidx.constraintlayout.core.widgets.Optimizer.OPTIMIZATION_NONE
+        root.optimizationLevel = androidx.constraintlayout.core.shaded.widgets.Optimizer.OPTIMIZATION_NONE
         root.layout()
         println("a) root: $root A: $a")
         assertEquals(a.left, 0)
@@ -871,7 +871,7 @@ class RatioTest {
         assertEquals(a.height, 600)
         a.verticalBiasPercent = 0f
         root.optimizationLevel =
-            androidx.constraintlayout.core.widgets.Optimizer.OPTIMIZATION_STANDARD
+            androidx.constraintlayout.core.shaded.widgets.Optimizer.OPTIMIZATION_STANDARD
         root.layout()
         println("c) root: $root A: $a")
         assertEquals(a.left, 0)
@@ -893,7 +893,7 @@ class RatioTest {
         a.connect(ConstraintAnchor.Type.BOTTOM, root, ConstraintAnchor.Type.BOTTOM)
         a.setVerticalDimensionBehaviour(ConstraintWidget.DimensionBehaviour.MATCH_CONSTRAINT)
         a.setDimensionRatio("1:1")
-        root.optimizationLevel = androidx.constraintlayout.core.widgets.Optimizer.OPTIMIZATION_NONE
+        root.optimizationLevel = androidx.constraintlayout.core.shaded.widgets.Optimizer.OPTIMIZATION_NONE
         root.layout()
         println("a) root: $root A: $a")
         assertEquals(a.left, 450)
@@ -901,7 +901,7 @@ class RatioTest {
         assertEquals(a.width, 100)
         assertEquals(a.height, 100)
         root.optimizationLevel =
-            androidx.constraintlayout.core.widgets.Optimizer.OPTIMIZATION_STANDARD
+            androidx.constraintlayout.core.shaded.widgets.Optimizer.OPTIMIZATION_STANDARD
         root.layout()
         println("b) root: $root A: $a")
         assertEquals(a.left, 450)
@@ -945,7 +945,7 @@ class RatioTest {
     fun testRatioGuideline() {
         val root = ConstraintWidgetContainer(0, 0, 400, 600)
         val a = ConstraintWidget(100, 20)
-        val guideline = androidx.constraintlayout.core.widgets.Guideline()
+        val guideline = androidx.constraintlayout.core.shaded.widgets.Guideline()
         guideline.setOrientation(ConstraintWidget.VERTICAL)
         guideline.setGuideBegin(200)
         root.debugName = "root"
@@ -992,7 +992,7 @@ class RatioTest {
         a.setDimensionRatio("16:9")
         root.setHorizontalDimensionBehaviour(ConstraintWidget.DimensionBehaviour.WRAP_CONTENT)
         root.setVerticalDimensionBehaviour(ConstraintWidget.DimensionBehaviour.WRAP_CONTENT)
-        root.optimizationLevel = androidx.constraintlayout.core.widgets.Optimizer.OPTIMIZATION_NONE
+        root.optimizationLevel = androidx.constraintlayout.core.shaded.widgets.Optimizer.OPTIMIZATION_NONE
         root.width = 0
         root.height = 0
         root.layout()
@@ -1030,7 +1030,7 @@ class RatioTest {
         a.setVerticalDimensionBehaviour(ConstraintWidget.DimensionBehaviour.MATCH_CONSTRAINT)
         a.setDimensionRatio("1:1")
         a.setHorizontalMatchStyle(ConstraintWidget.MATCH_CONSTRAINT_PERCENT, 0, 0, 0.7f)
-        root.optimizationLevel = androidx.constraintlayout.core.widgets.Optimizer.OPTIMIZATION_NONE
+        root.optimizationLevel = androidx.constraintlayout.core.shaded.widgets.Optimizer.OPTIMIZATION_NONE
         root.layout()
         println("a) root: $root A: $a")
         val w: Int = (0.7 * root.width).toInt()
@@ -1039,7 +1039,7 @@ class RatioTest {
         assertEquals(a.left, (root.width - w) / 2)
         assertEquals(a.top, (root.height - w) / 2)
         root.optimizationLevel =
-            androidx.constraintlayout.core.widgets.Optimizer.OPTIMIZATION_STANDARD
+            androidx.constraintlayout.core.shaded.widgets.Optimizer.OPTIMIZATION_STANDARD
         root.layout()
         println("b) root: $root A: $a")
         assertEquals(a.width, w)

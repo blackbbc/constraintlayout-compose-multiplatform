@@ -16,12 +16,12 @@
 package androidx.constraintlayout.core
 
 import androidx.constraintlayout.core.test.assertEquals
-import androidx.constraintlayout.core.widgets.Barrier
-import androidx.constraintlayout.core.widgets.ConstraintAnchor
-import androidx.constraintlayout.core.widgets.ConstraintWidget
-import androidx.constraintlayout.core.widgets.ConstraintWidgetContainer
-import androidx.constraintlayout.core.widgets.Guideline
-import androidx.constraintlayout.core.widgets.Optimizer
+import androidx.constraintlayout.core.shaded.widgets.Barrier
+import androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor
+import androidx.constraintlayout.core.shaded.widgets.ConstraintWidget
+import androidx.constraintlayout.core.shaded.widgets.ConstraintWidgetContainer
+import androidx.constraintlayout.core.shaded.widgets.Guideline
+import androidx.constraintlayout.core.shaded.widgets.Optimizer
 import kotlin.math.max
 import kotlin.math.min
 import kotlin.test.Test

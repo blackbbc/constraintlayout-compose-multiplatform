@@ -3,8 +3,8 @@ package androidx.constraintlayout.compose.extra
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.PathEffect
 import androidx.compose.ui.graphics.drawscope.DrawScope
-import androidx.constraintlayout.core.state.Transition
-import androidx.constraintlayout.core.state.WidgetFrame
+import androidx.constraintlayout.core.shaded.state.Transition
+import androidx.constraintlayout.core.shaded.state.WidgetFrame
 
 internal expect fun DrawScope.drawPathsPlatform(
     parentWidth: Float,

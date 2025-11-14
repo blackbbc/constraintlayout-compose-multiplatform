@@ -17,10 +17,10 @@ package androidx.constraintlayout.core.scout
 
 import androidx.constraintlayout.core.ext.Rectangle
 import androidx.constraintlayout.core.ext.compare
-import androidx.constraintlayout.core.widgets.ConstraintAnchor
-import androidx.constraintlayout.core.widgets.ConstraintWidget
-import androidx.constraintlayout.core.widgets.Guideline
-import androidx.constraintlayout.core.widgets.WidgetContainer
+import androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor
+import androidx.constraintlayout.core.shaded.widgets.ConstraintWidget
+import androidx.constraintlayout.core.shaded.widgets.Guideline
+import androidx.constraintlayout.core.shaded.widgets.WidgetContainer
 import kotlin.math.abs
 import kotlin.math.hypot
 import kotlin.math.max

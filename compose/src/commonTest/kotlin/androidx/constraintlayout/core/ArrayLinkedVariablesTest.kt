@@ -15,6 +15,10 @@
  */
 package androidx.constraintlayout.core
 
+import androidx.constraintlayout.core.shaded.ArrayLinkedVariables
+import androidx.constraintlayout.core.shaded.ArrayRow
+import androidx.constraintlayout.core.shaded.Cache
+import androidx.constraintlayout.core.shaded.SolverVariable
 import kotlin.test.Test
 import kotlin.test.assertTrue
 

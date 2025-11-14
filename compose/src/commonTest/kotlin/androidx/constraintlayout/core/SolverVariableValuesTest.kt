@@ -15,6 +15,9 @@
  */
 package androidx.constraintlayout.core
 
+import androidx.constraintlayout.core.shaded.Cache
+import androidx.constraintlayout.core.shaded.SolverVariable
+import androidx.constraintlayout.core.shaded.SolverVariableValues
 import kotlin.random.Random
 import kotlin.test.Test
 import kotlin.test.assertEquals

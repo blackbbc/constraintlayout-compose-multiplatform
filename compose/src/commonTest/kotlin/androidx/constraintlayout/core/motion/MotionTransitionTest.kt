@@ -13,18 +13,18 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package androidx.constraintlayout.core.motion
+package androidx.constraintlayout.core.shaded.motion
 
-import androidx.constraintlayout.core.parser.CLObject
-import androidx.constraintlayout.core.parser.CLParser
-import androidx.constraintlayout.core.parser.CLParsingException
-import androidx.constraintlayout.core.state.CorePixelDp
-import androidx.constraintlayout.core.state.Transition
-import androidx.constraintlayout.core.state.TransitionParser
-import androidx.constraintlayout.core.state.WidgetFrame
-import androidx.constraintlayout.core.widgets.ConstraintAnchor
-import androidx.constraintlayout.core.widgets.ConstraintWidget
-import androidx.constraintlayout.core.widgets.ConstraintWidgetContainer
+import androidx.constraintlayout.core.shaded.parser.CLObject
+import androidx.constraintlayout.core.shaded.parser.CLParser
+import androidx.constraintlayout.core.shaded.parser.CLParsingException
+import androidx.constraintlayout.core.shaded.state.CorePixelDp
+import androidx.constraintlayout.core.shaded.state.Transition
+import androidx.constraintlayout.core.shaded.state.TransitionParser
+import androidx.constraintlayout.core.shaded.state.WidgetFrame
+import androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor
+import androidx.constraintlayout.core.shaded.widgets.ConstraintWidget
+import androidx.constraintlayout.core.shaded.widgets.ConstraintWidgetContainer
 import kotlin.math.max
 import kotlin.math.min
 import kotlin.test.Test

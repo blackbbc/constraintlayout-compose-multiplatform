@@ -15,9 +15,9 @@
  */
 package androidx.constraintlayout.core
 
-import androidx.constraintlayout.core.widgets.ConstraintAnchor
-import androidx.constraintlayout.core.widgets.ConstraintWidget
-import androidx.constraintlayout.core.widgets.ConstraintWidgetContainer
+import androidx.constraintlayout.core.shaded.widgets.ConstraintAnchor
+import androidx.constraintlayout.core.shaded.widgets.ConstraintWidget
+import androidx.constraintlayout.core.shaded.widgets.ConstraintWidgetContainer
 import kotlin.test.Test
 import kotlin.test.assertEquals
 
@@ -87,7 +87,7 @@ class VisibilityTest {
         val root = ConstraintWidgetContainer(0, 0, 800, 600)
         val a = ConstraintWidget(100, 20)
         val b = ConstraintWidget(100, 20)
-        val guideline = androidx.constraintlayout.core.widgets.Guideline()
+        val guideline = androidx.constraintlayout.core.shaded.widgets.Guideline()
         guideline.setGuidePercent(0.5f)
         guideline.setOrientation(ConstraintWidget.HORIZONTAL)
         root.setDebugSolverName(root.getSystem(), "root")

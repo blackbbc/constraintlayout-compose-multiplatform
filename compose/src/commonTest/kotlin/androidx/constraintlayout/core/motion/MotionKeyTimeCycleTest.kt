@@ -13,12 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package androidx.constraintlayout.core.motion
+package androidx.constraintlayout.core.shaded.motion
 
-import androidx.constraintlayout.core.motion.key.MotionKeyTimeCycle
-import androidx.constraintlayout.core.motion.utils.ArcCurveFit
-import androidx.constraintlayout.core.motion.utils.KeyCache
-import androidx.constraintlayout.core.motion.utils.TypedValues
+import androidx.constraintlayout.core.shaded.motion.key.MotionKeyTimeCycle
+import androidx.constraintlayout.core.shaded.motion.utils.ArcCurveFit
+import androidx.constraintlayout.core.shaded.motion.utils.KeyCache
+import androidx.constraintlayout.core.shaded.motion.utils.TypedValues
 import androidx.constraintlayout.core.test.assertEquals
 import kotlinx.coroutines.Runnable
 import kotlin.test.Test

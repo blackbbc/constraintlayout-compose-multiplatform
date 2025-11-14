@@ -15,6 +15,10 @@
  */
 package androidx.constraintlayout.core
 
+import androidx.constraintlayout.core.shaded.ArrayRow
+import androidx.constraintlayout.core.shaded.Cache
+import androidx.constraintlayout.core.shaded.SolverVariable
+
 /**
  * Store a set of variables and their values in an array.
  */

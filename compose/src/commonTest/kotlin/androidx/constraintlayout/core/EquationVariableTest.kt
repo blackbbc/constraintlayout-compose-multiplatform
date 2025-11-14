@@ -15,6 +15,8 @@
  */
 package androidx.constraintlayout.core
 
+import androidx.constraintlayout.core.shaded.LinearSystem
+import androidx.constraintlayout.core.shaded.SolverVariable
 import kotlin.test.BeforeTest
 import kotlin.test.Test
 import kotlin.test.assertEquals
