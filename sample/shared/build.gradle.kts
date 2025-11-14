@@ -28,49 +28,49 @@ kotlin {
         }
     }
 
-    js(IR) {
-        browser()
-    }
-
-    @OptIn(ExperimentalWasmDsl::class)
-    wasmJs {
-        browser {
-            commonWebpackConfig {
-                outputFileName = "sample.js"
-            }
-        }
-
-        binaries.executable()
-    }
-
-    macosArm64 {
-        binaries {
-            executable {
-                entryPoint = "main"
-                freeCompilerArgs +=
-                    listOf(
-                        "-linker-option",
-                        "-framework",
-                        "-linker-option",
-                        "Metal",
-                    )
-            }
-        }
-    }
-    macosX64 {
-        binaries {
-            executable {
-                entryPoint = "main"
-                freeCompilerArgs +=
-                    listOf(
-                        "-linker-option",
-                        "-framework",
-                        "-linker-option",
-                        "Metal",
-                    )
-            }
-        }
-    }
+//    js(IR) {
+//        browser()
+//    }
+//
+//    @OptIn(ExperimentalWasmDsl::class)
+//    wasmJs {
+//        browser {
+//            commonWebpackConfig {
+//                outputFileName = "sample.js"
+//            }
+//        }
+//
+//        binaries.executable()
+//    }
+//
+//    macosArm64 {
+//        binaries {
+//            executable {
+//                entryPoint = "main"
+//                freeCompilerArgs +=
+//                    listOf(
+//                        "-linker-option",
+//                        "-framework",
+//                        "-linker-option",
+//                        "Metal",
+//                    )
+//            }
+//        }
+//    }
+//    macosX64 {
+//        binaries {
+//            executable {
+//                entryPoint = "main"
+//                freeCompilerArgs +=
+//                    listOf(
+//                        "-linker-option",
+//                        "-framework",
+//                        "-linker-option",
+//                        "Metal",
+//                    )
+//            }
+//        }
+//    }
 
     listOf(
         iosX64(),
@@ -82,6 +82,8 @@ kotlin {
             isStatic = true
         }
     }
+
+    ohosArm64()
 
     sourceSets {
         val commonMain by getting {
@@ -113,6 +115,11 @@ kotlin {
         }
 
         val iosMain by getting {
+            dependencies {
+            }
+        }
+
+        val ohosArm64Main by getting {
             dependencies {
             }
         }
@@ -154,11 +161,11 @@ compose.desktop {
     }
 }
 
-compose.desktop.nativeApplication {
-    targets(kotlin.targets.getByName("macosX64"), kotlin.targets.getByName("macosArm64"))
-    distributions {
-        targetFormats(TargetFormat.Dmg)
-        packageName = "ConstraintLayoutSample"
-        packageVersion = "1.0.0"
-    }
-}
+//compose.desktop.nativeApplication {
+//    targets(kotlin.targets.getByName("macosX64"), kotlin.targets.getByName("macosArm64"))
+//    distributions {
+//        targetFormats(TargetFormat.Dmg)
+//        packageName = "ConstraintLayoutSample"
+//        packageVersion = "1.0.0"
+//    }
+//}

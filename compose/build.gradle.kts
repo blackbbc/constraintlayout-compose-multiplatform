@@ -25,23 +25,23 @@ kotlin {
             jvmTarget.set(JvmTarget.fromTarget(extraJvmTarget))
         }
     }
-    jvm {
-        compilerOptions {
-            jvmTarget.set(JvmTarget.fromTarget(extraJvmTarget))
-        }
-    }
+//    jvm {
+//        compilerOptions {
+//            jvmTarget.set(JvmTarget.fromTarget(extraJvmTarget))
+//        }
+//    }
 
-    js(IR) {
-        browser()
-    }
-
-    @OptIn(ExperimentalWasmDsl::class)
-    wasmJs {
-        browser()
-    }
-
-    macosArm64()
-    macosX64()
+//    js(IR) {
+//        browser()
+//    }
+//
+//    @OptIn(ExperimentalWasmDsl::class)
+//    wasmJs {
+//        browser()
+//    }
+//
+//    macosArm64()
+//    macosX64()
 
     listOf(
         iosX64(),
@@ -53,6 +53,8 @@ kotlin {
             isStatic = true
         }
     }
+
+    ohosArm64()
 
     targets.configureEach {
         compilations.configureEach {
@@ -88,11 +90,12 @@ kotlin {
             dependsOn(commonMain)
         }
 
-        val jvmMain by getting {
-            dependsOn(jvmCommonMain)
-            dependsOn(nonAndroid)
-        }
+//        val jvmMain by getting {
+//            dependsOn(jvmCommonMain)
+//            dependsOn(nonAndroid)
+//        }
         val androidMain by getting {
+            dependsOn(commonMain)
             dependsOn(jvmCommonMain)
         }
 
@@ -100,13 +103,13 @@ kotlin {
             dependsOn(nonAndroid)
         }
 
-        val wasmJsMain by getting {
-            dependsOn(nonAndroid)
-        }
-
-        val jsMain by getting {
-            dependsOn(nonAndroid)
-        }
+//        val wasmJsMain by getting {
+//            dependsOn(nonAndroid)
+//        }
+//
+//        val jsMain by getting {
+//            dependsOn(nonAndroid)
+//        }
 
         val commonTest by getting {
             dependencies {
